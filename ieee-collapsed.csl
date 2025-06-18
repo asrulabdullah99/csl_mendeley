@@ -2,31 +2,35 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
   <info>
     <title>IEEE Collapsed Sequential</title>
-    <id>http://www.zotero.org/styles/ieee-collapsed</id>
-    <link href="http://www.zotero.org/styles/ieee-collapsed" rel="self"/>
+    <id>http://www.zotero.org/styles/ieee-collapsed-sequential</id>
+    <link href="http://www.zotero.org/styles/ieee-collapsed-sequential" rel="self"/>
     <author>
-      <name>Your Name</name>
+      <name>Asrul Abdullah</name>
     </author>
     <category citation-format="numeric"/>
     <category field="engineering"/>
+    <updated>2025-06-18T00:00:00+00:00</updated>
   </info>
+
   <citation collapse="citation-number">
     <sort>
       <key variable="citation-number"/>
     </sort>
-    <layout prefix="[" suffix="]" delimiter=",">
+    <layout prefix="[" suffix="]" delimiter=", ">
       <text variable="citation-number"/>
     </layout>
   </citation>
+
   <bibliography>
     <sort>
       <key variable="citation-number"/>
     </sort>
     <layout hanging-indent="true" delimiter=". ">
-      <text variable=" citation-number" prefix="[" suffix="]. "/>
-      <text variable="title" font-style="italic"/>
-      <text variable="container-title"/>
-      <text variable="issued" prefix=" (" suffix=")"/>
+      <text variable="citation-number" prefix="[" suffix="]"/>
+      <text macro="author" suffix=". "/>
+      <text macro="title" suffix=". "/>
+      <text macro="container-title"/>
+      <text variable="issued" prefix=" (" suffix=")."/>
     </layout>
   </bibliography>
 </style>
