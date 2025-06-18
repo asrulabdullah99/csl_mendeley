@@ -12,6 +12,23 @@
     <updated>2025-06-18T12:00:00+00:00</updated>
   </info>
 
+  <!-- Macros -->
+  <macro name="author">
+    <names variable="author">
+      <name and="text" initialize-with="." delimiter=", " />
+      <label form="short" prefix=", " text-case="lowercase" suffix="."/>
+    </names>
+  </macro>
+
+  <macro name="title">
+    <text variable="title" font-style="italic"/>
+  </macro>
+
+  <macro name="container-title">
+    <text variable="container-title" prefix=" " font-style="normal"/>
+  </macro>
+
+  <!-- In-text citation style -->
   <citation collapse="citation-number">
     <sort>
       <key variable="citation-number"/>
@@ -21,12 +38,13 @@
     </layout>
   </citation>
 
+  <!-- Bibliography style -->
   <bibliography>
     <sort>
       <key variable="citation-number"/>
     </sort>
     <layout hanging-indent="true" delimiter=". ">
-      <text variable="citation-number" prefix="[" suffix="]"/>
+      <text variable="citation-number" prefix="[" suffix="] "/>
       <text macro="author" suffix=". "/>
       <text macro="title" suffix=". "/>
       <text macro="container-title"/>
